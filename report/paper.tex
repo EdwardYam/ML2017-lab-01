@@ -171,7 +171,7 @@ Da Ren % Your name
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-Mingkui Tan or Qingyao Wu % Supervisor's Name
+Qingyao Wu % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[2cm]
 ~
@@ -254,7 +254,7 @@ Now, we can use Eq.~\eqref{eq5} to calculate derivative at each step and update 
 
 In the linear classification task, I also use the Eq.~\eqref{eq3}. Since it is a different task, I choose another loss function. The loss function I choose is called hinge loss, which can be described in Eq.~\eqref{eq6}
 \begin{equation}
-L_2 = \begin{Vmatrix}W\end{Vmatrix}^2/2 + C/m \sum_{i=1}^m max(0, 1-y_i(W^Tx_i+b)) 
+L_2 = \begin{Vmatrix}W\end{Vmatrix}^2/2 + C/m \sum_{i=1}^m max(0, 1-y_i(W^Tx_i+b))
 \label{eq6}
 \end{equation}
 where $C$ is a hyperparameter which can be adjusted in different dataset.
