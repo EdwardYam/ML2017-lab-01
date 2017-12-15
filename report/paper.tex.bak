@@ -171,7 +171,7 @@ Da Ren % Your name
 \begin{minipage}{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-Mingkui Tan or Qingyao Wu % Supervisor's Name
+Qingyao Wu % Supervisor's Name
 \end{flushright}
 \end{minipage}\\[2cm]
 ~
@@ -212,13 +212,13 @@ Graduate
 
 % Write abstract here
 \begin{abstract}
-Gradient descent plays an important role in machine learning. It can help us get the global optimal value of a function. However, one of the most important task in machine learning is to get the optimal value for loss function. Gradient descent is widely used in this task. I use gradient descent to optimize two tasks: liner regression and linear classification. The experiments show that gradient descent can help us minimize the cost function.
+Gradient descent plays an important role in machine learning. It can help us get the optimal value of a function. However, one of the most important task in machine learning is to get the optimal value for loss function. Gradient descent is widely used in this task. I use gradient descent to optimize two tasks: liner regression and linear classification. The experiments show that gradient descent can help us minimize the cost function.
 \end{abstract}
 
 % Each section begins with a \section{title} command
 \section{Introduction}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-\PARstart{G}{radient} descent is a important method in machine learning. The most important tasks in many machine learning models is to update or calculate their parameters which can lead the corresponding loss functions value to be minimal value. There are many methods to solve this problem. Gradient descent is one of the most widely used method in this task. It can help us minimize our cost function in an efficient way. Therefore, it is a significant approach in machine learning. In the paper, I implement the standard gradient descent to optimize the loss function in linear regression and linear classification. The experiments' results show that gradient descent can minimize the loss function.
+\PARstart{G}{radient} descent is a important method in machine learning. The most important tasks in many machine learning models is to update or calculate their parameters which can lead the corresponding loss functions value to be minimal value. There are many methods to solve this problem. Gradient descent is one of the most widely used method in this task. It can help us minimize our cost function in an efficient way. Therefore, it is a significant approach in machine learning. In the paper, I implement the standard gradient descent to optimize the loss function in linear regression and linear classification. The experiments' results show that gradient descent can minimize the loss function in both two tasks.
 
 % Main Part
 \section{Methods and Theory}
@@ -254,7 +254,7 @@ Now, we can use Eq.~\eqref{eq5} to calculate derivative at each step and update 
 
 In the linear classification task, I also use the Eq.~\eqref{eq3}. Since it is a different task, I choose another loss function. The loss function I choose is called hinge loss, which can be described in Eq.~\eqref{eq6}
 \begin{equation}
-L_2 = \begin{Vmatrix}W\end{Vmatrix}^2/2 + C/m \sum_{i=1}^m max(0, 1-y_i(W^Tx_i+b)) 
+L_2 = \begin{Vmatrix}W\end{Vmatrix}^2/2 + C/m \sum_{i=1}^m max(0, 1-y_i(W^Tx_i+b))
 \label{eq6}
 \end{equation}
 where $C$ is a hyperparameter which can be adjusted in different dataset.
@@ -305,14 +305,13 @@ In the linear classfication experiment, the learning rate $\lambda$ is set to be
 
 We can find that both of the loss of training set and test set decrease quickly at the beginning and close to unchange at the end of iterations. It means that the value of loss function is closed to global minimal value.
 
-After finish training, I set a threshold to classify the data in validation set. I set the threshold to be 0, if the value calculated by model is smaller than 0, the corresponding data will be classified into one class (the label of this class is -1). If the value is larger or equal than 0, the corresponding data will be classified into another class (the label of this class is 1). And then I calculate the precision, recall and F1 score which is shown in 
+After finish training, I set a threshold to classify the data in validation set. I set the threshold to be 0, if the value calculated by model is smaller than 0, the corresponding data will be classified into one class (the label of this class is -1). If the value is larger or equal than 0, the corresponding data will be classified into another class (the label of this class is 1). And then I calculate the precision, recall and f1-score which is shown in Table~\ref{table_1}.
 
-Table~\ref{table_1}.
     \begin{table}[!hbt]
 		% Center the table
 		\begin{center}
 		% Title of the table
-		\caption{Simulation Parameters}
+		\caption{Classification Results}
 		\label{table_1}
 		% Table itself: here we have two columns which are centered and have lines to the left, right and in the middle: |c|c|
 		\begin{tabular}{|c|c|c|c|c|}
@@ -320,69 +319,22 @@ Table~\ref{table_1}.
 			\hline
 			% To end a column type &
 			% For a linebreak type \\
-			Information message length & $k=16000$ bit & $k=16000$ bit & $k=16000$ bit  & $k=16000$ bit \\
+			  & precision & recall & f1-score & support \\
 			\hline
-			Radio segment size & $b=160$ bit & $k=16000$ bit & $k=16000$ bit  & $k=16000$ bit \\
+			class1 & 0.93 & 0.81 & 0.87  & 117 \\
 			\hline
-			Rate of component codes & $R_{cc}=1/3$ & $k=16000$ bit & $k=16000$ bit  & $k=16000$ bit \\
+			class2 & 0.79 & 0.92 & 0.85  & 90 \\
 			\hline
-			Polynomial of component encoders & $[1 , 33/37 , 25/37]_8$ & $k=16000$ bit & $k=16000$ bit  & $k=16000$ bit \\
-			\hline
-		\end{tabular}
-		\end{center}
-	\end{table}
-
-
-All detailed implementation in your experiment: initialization, process, results, all kinds of parameters. In a word, describe clearly What you do and how you do.\par
-
-	% You can reference tables and figure by using the \ref{label} command. Each table and figure needs to have a UNIQUE label.
-	Figures and tables should be labeled and numbered, such as in Table~\ref{tab:simParameters} and Fig.~\ref{fig:tf_plot}.
-
-	% This is how you define a table: the [!hbt] means that LaTeX is forced (by the !) to place the table exactly here (by h), or if that doesnt work because of a pagebreak or so, it tries to place the table to the bottom of the page (by b) or the top (by t).
-	\begin{table}[!hbt]
-		% Center the table
-		\begin{center}
-		% Title of the table
-		\caption{Simulation Parameters}
-		\label{tab:simParameters}
-		% Table itself: here we have two columns which are centered and have lines to the left, right and in the middle: |c|c|
-		\begin{tabular}{|c|c|}
-			% To create a horizontal line, type \hline
-			\hline
-			% To end a column type &
-			% For a linebreak type \\
-			Information message length & $k=16000$ bit \\
-			\hline
-			Radio segment size & $b=160$ bit \\
-			\hline
-			Rate of component codes & $R_{cc}=1/3$\\
-			\hline
-			Polynomial of component encoders & $[1 , 33/37 , 25/37]_8$\\
+			avg / total & 0.87 & 0.86 & 0.86 & 207 \\
 			\hline
 		\end{tabular}
 		\end{center}
 	\end{table}
 
-	% If you have questions about how to write mathematical formulas in LaTeX, please read a LaTeX book or the 'Not So Short Introduction to LaTeX': tobi.oetiker.ch/lshort/lshort.pdf
-
-	% This is how you include a eps figure in your document. LaTeX only accepts EPS or TIFF files.
-	\begin{figure}[!hbt]
-		% Center the figure.
-		\begin{center}
-		% Include the eps file, scale it such that it's width equals the column width. You can also put width=8cm for example...
-		\includegraphics[width=\columnwidth]{plot_tf}
-		% Create a subtitle for the figure.
-		\caption{Simulation results on the AWGN channel. Average throughput $k/n$ vs $E_s/N_0$.}
-		% Define the label of the figure. It's good to use 'fig:title', so you know that the label belongs to a figure.
-		\label{fig:tf_plot}
-		\end{center}
-	\end{figure}
-
+From Table~\ref{table_1}, we can find that the precision, recall and f1-score of classification is larger than 0.85. It is a good result of linear classification.
 
 \section{Conclusion}
-	This section summarizes the paper. In our experiments, you can also write your gains and inspirations in here.
-
-
+In this experiment, I implement gradient descent in linear regression and linear classification. Both of their weight matrix is updated so that corresponding loss functions can be minimized. However, the loss function I use is convex, so that I don't need to care about the problem of local minimal. If the loss function is non-convex, gradient descent maybe fail to find the global minimal. Learning how to use gradient descent to get global minimal in non-convex function is my future work.
 
 % Your document ends here!
 \end{document}

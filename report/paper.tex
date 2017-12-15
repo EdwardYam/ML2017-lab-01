@@ -212,13 +212,13 @@ Graduate
 
 % Write abstract here
 \begin{abstract}
-Gradient descent plays an important role in machine learning. It can help us get the global optimal value of a function. However, one of the most important task in machine learning is to get the optimal value for loss function. Gradient descent is widely used in this task. I use gradient descent to optimize two tasks: liner regression and linear classification. The experiments show that gradient descent can help us minimize the cost function.
+Gradient descent plays an important role in machine learning. It can help us get the optimal value of a function. However, one of the most important task in machine learning is to get the optimal value for loss function. Gradient descent is widely used in this task. I use gradient descent to optimize two tasks: liner regression and linear classification. The experiments show that gradient descent can help us minimize the cost function.
 \end{abstract}
 
 % Each section begins with a \section{title} command
 \section{Introduction}
 	% \PARstart{}{} creates a tall first letter for this first paragraph
-\PARstart{G}{radient} descent is a important method in machine learning. The most important tasks in many machine learning models is to update or calculate their parameters which can lead the corresponding loss functions value to be minimal value. There are many methods to solve this problem. Gradient descent is one of the most widely used method in this task. It can help us minimize our cost function in an efficient way. Therefore, it is a significant approach in machine learning. In the paper, I implement the standard gradient descent to optimize the loss function in linear regression and linear classification. The experiments' results show that gradient descent can minimize the loss function.
+\PARstart{G}{radient} descent is a important method in machine learning. The most important tasks in many machine learning models is to update or calculate their parameters which can lead the corresponding loss functions value to be minimal value. There are many methods to solve this problem. Gradient descent is one of the most widely used method in this task. It can help us minimize our cost function in an efficient way. Therefore, it is a significant approach in machine learning. In the paper, I implement the standard gradient descent to optimize the loss function in linear regression and linear classification. The experiments' results show that gradient descent can minimize the loss function in both two tasks.
 
 % Main Part
 \section{Methods and Theory}
@@ -293,7 +293,7 @@ In the linear regression experiment, the learning rate $\lambda$ is set to be 0.
 \label{fig_1}
 \end{figure}
 
-We can find that both of the loss of training set and test set decrease quickly at the beginning and close to unchange at the end of iterations. It means that the value of loss function is closed to global minimal value.
+We can find that both of the loss of training set and test set decrease quickly at the beginning and close to unchange at the end of iterations. It means that the value of loss function is closed to minimal value.
 
 In the linear classfication experiment, the learning rate $\lambda$ is set to be 0.1. The weight matrix is initialized randomly. I split the dataset into training set and validation set. There are 483 data in training set and 207 data in validation set. The iteration's number is set to 300. The loss value of training set and validation set is described in Fig.~\ref{fig_2}.
 
@@ -331,10 +331,10 @@ After finish training, I set a threshold to classify the data in validation set.
 		\end{center}
 	\end{table}
 
-From Table~\ref{table_1}, we can find that the precision, recall and f1-score of classification is larger than 0.85. It is a good result of linear classification.
+From Table~\ref{table_1}, we can find that the precision, recall and f1-score of classification is larger than 0.85. It shows that linear classification performs well in this task.
 
 \section{Conclusion}
-In this experiment, I implement gradient descent in linear regression and linear classification. Both of their weight matrix is updated so that corresponding loss functions can be minimized. However, the loss function I use is convex, so that I don't need to care about the problem of local minimal. If the loss function is non-convex, gradient descent maybe fail to find the global minimal. Learning how to use gradient descent to get global minimal in non-convex function is my future work.
+In this experiment, I implement gradient descent in linear regression and linear classification. Both of their weight matrix is updated so that corresponding loss functions can be minimized. If the loss function is convex, we don't need to care about the problem of local minimal. However, if the loss function is non-convex, gradient descent maybe fail to find the global minimal. Learning how to use gradient descent to get global minimal in non-convex function is my future work.
 
 % Your document ends here!
 \end{document}
