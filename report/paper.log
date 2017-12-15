@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.22)  15 DEC 2017 10:57
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2017.11.22)  15 DEC 2017 11:19
 entering extended mode
 **F:/workspace/Jupyter/ML2017-lab-01/report/paper.tex
 (F:/workspace/Jupyter/ML2017-lab-01/report/paper.tex
@@ -231,17 +231,17 @@ LaTeX Warning: No \author given.
 [1
 
 
-] <line_1.png, id=20, 315.42844pt x 208.52907pt>
+] <line_1.png, id=20, 298.86656pt x 202.50656pt>
 File: line_1.png Graphic file (type png)
  <use line_1.png>
 Package pdftex.def Info: line_1.png used on input line 291.
-(pdftex.def)             Requested size: 227.75806pt x 150.56305pt.
+(pdftex.def)             Requested size: 222.21121pt x 150.56305pt.
 
-<line_2.png, id=22, 309.40594pt x 204.01219pt>
+<line_2.png, id=22, 303.38344pt x 201.75375pt>
 File: line_2.png Graphic file (type png)
  <use line_2.png>
 Package pdftex.def Info: line_2.png used on input line 301.
-(pdftex.def)             Requested size: 228.35722pt x 150.56305pt.
+(pdftex.def)             Requested size: 226.40747pt x 150.56305pt.
  [2 <F:/workspace/Jupyter/ML2017-lab-01/report/line_1.png> <F:/workspace/Jupyte
 r/ML2017-lab-01/report/line_2.png>] (F:\workspace\Jupyter\ML2017-lab-01\report\
 paper.aux) ) 
@@ -263,7 +263,7 @@ m/cmr7.pfb><F:/softwares/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 s/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><F:/softwares/CTEX/MiKTeX/fonts/
 type1/urw/times/utmbi8a.pfb><F:/softwares/CTEX/MiKTeX/fonts/type1/urw/times/utm
 r8a.pfb><F:/softwares/CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (3 pages, 448279 bytes).
+Output written on paper.pdf (3 pages, 447314 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
